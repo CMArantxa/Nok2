@@ -1,14 +1,47 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex; /* Añadido */
-  flex-direction: column;
-  min-height: 100vh; /* Añadido para ocupar al menos el 100% de la altura de la ventana */
+/* Estilos para el contenido de cada bloque */
+.content-block {
+  text-align: center; /* Centrar el contenido */
+  margin-top: 50px; /* Espacio superior */
+  margin-bottom: 50px; /* Espacio inferior */
 }
 
-header, footer {
-  background-color: antiquewhite;
+/* Estilos para las tarjetas */
+.card {
+  background-image: url('../img/maderaclara.jpg');
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el texto dentro de las tarjetas */
+.card-body {
+  font-weight: bold;
+  padding: 20px; /* Espacio interno */
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card h2 {
+  color: black; /* Color del texto */
+  font-weight: bolder;
+}
+
+/* Estilos específicos de tu hoja de estilos */
+body {
+  font-family: "Advent Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2::first-letter {
+  font-size: 200%; /* Tamaño de la primera letra */
+  font-weight: bold; /* Opcional: hacer la primera letra en negrita */
+}
+
+header,
+footer {
+  background-image: url('../img/maderaclara.jpg');
   color: black;
   padding: 1em 0;
 }
@@ -21,52 +54,88 @@ footer {
   flex-shrink: 0;
   text-align: center;
   width: 100%;
-  background-color: antiquewhite;
   color: black;
   padding: 1em 0;
-  margin-top: auto; /* Añadido */
+  margin-top: auto;
 }
 
-main {
+.main {
   margin-top: 2em;
 }
 
 img {
-  max-width: 100%;
+  max-width: 120%;
   height: auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   padding: 0.5em 0;
 }
 
+/* Estilos para la frase en movimiento */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+main{
+  background-image: url('../img/maderaclara.jpg');
+}
+.scrolling-text {
+  color: #90091d;
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  align-items: center;
+  white-space: nowrap;
+  animation: scroll 7s linear infinite;
+  width: auto; /* Ajustar el ancho automáticamente */
+  overflow-x: hidden; /* Evitar desplazamiento horizontal en dispositivos móviles */
+}
+
+
+
+/* Estilos para el footer */
+.contact-info p {
+  margin-right: 16px;
+}
+
 /* Estilos personalizados para los botones del navbar */
 .navbar-nav .nav-link.btn-nav {
-  background-color: #f8f9fa; /* Color de fondo predeterminado */
-  color: #343a40; /* Color del texto */
-  border: 1px solid transparent; /* Borde transparente por defecto */
-  margin: 0 5px; /* Espaciado entre botones */
-  border-radius: 4px; /* Bordes redondeados */
+  background-image: url('../img/maderaclara.jpg');
+  color: #343a40;
+  border: 1px solid transparent;
+  margin: 0 5px;
+  border-radius: 8px;
+  border-color: #343a40;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .navbar-nav .nav-link.btn-nav:hover,
 .navbar-nav .nav-link.btn-nav:focus {
-  background-color: #b4d7eb; /* Color de fondo al pasar el mouse */
-  color: #343a40; /* Color del texto al pasar el mouse */
-  border-color: #ebb8b4; /* Color del borde al pasar el mouse */
+  background-color: #b4d7eb;
+  color: #343a40;
+  border-color: #343a40;
 }
 
 .navbar-nav .nav-link.btn-nav.active {
-  background-color: #ebb8b4; /* Color de fondo cuando está activo */
-  color: #fff; /* Color del texto cuando está activo */
-  border-color: #ebb8b4; /* Color del borde cuando está activo */
+  background-color: #ebb8b4;
+  color: #fff;
+  border-color: #343a40;
 }
 
-/* Ajustes para el color del texto */
 .navbar-nav .nav-link.btn-nav:hover,
 .navbar-nav .nav-link.btn-nav:focus,
 .navbar-nav .nav-link.btn-nav.active {
-  color: #fff; /* Color del texto al pasar el mouse o cuando está activo */
+  color: #fff;
+}
+
+.navbar-brand {
+  color:black;
+  font-weight: bold;
 }
