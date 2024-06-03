@@ -1,3 +1,6 @@
+*{
+  background-image: url('../img/maderauro.png');
+}
 /* Estilos para el contenido de cada bloque */
 .content-block {
   text-align: center; /* Centrar el contenido */
@@ -7,9 +10,11 @@
 
 /* Estilos para las tarjetas */
 .card {
-  background-image: url('../img/maderaclara.jpg');
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  background-image: url('../img/maderauro.png');
+  border:none;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* Estilos para el texto dentro de las tarjetas */
@@ -18,14 +23,41 @@
   padding: 20px; /* Espacio interno */
 }
 
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+.imagenes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: calc(30% - 10px); /* Restamos 10px para el margen */
+  margin-bottom: 10px;
+}
+.scrolling-text {
+  background-color: transparent;
+  color: #90091d;
+  margin-top: 300px;
+  font-size: 36px;
+  font-weight: bold;
+  align-items: center;
+  white-space: nowrap;
+  animation: scroll 9s linear infinite;
+}
 /* Estilos para los títulos de las tarjetas */
 .card h2 {
   color: black; /* Color del texto */
   font-weight: bolder;
 }
+/*estilos frase en movimiento*/
 
 /* Estilos específicos de tu hoja de estilos */
 body {
+  color: black;
   font-family: "Advent Pro", sans-serif;
   margin: 0;
   padding: 0;
@@ -41,7 +73,7 @@ h2::first-letter {
 
 header,
 footer {
-  background-image: url('../img/maderaclara.jpg');
+  background-image: url('../img/maderauro.png');
   color: black;
   padding: 1em 0;
 }
@@ -73,6 +105,16 @@ h2 {
   margin: 0;
   padding: 0.5em 0;
 }
+.btn-custom {
+  font-size: 18px;
+  color: black;
+  border: none;
+  background-color: transparent;
+}
+.btn-custom:focus, .btn-custom:active {
+  box-shadow: none;
+  outline: none;
+}
 
 /* Estilos para la frase en movimiento */
 @keyframes scroll {
@@ -84,7 +126,8 @@ h2 {
   }
 }
 main{
-  background-image: url('../img/maderaclara.jpg');
+  background-image: url('../img/maderauro.png');
+
 }
 .scrolling-text {
   color: #90091d;
@@ -107,7 +150,7 @@ main{
 
 /* Estilos personalizados para los botones del navbar */
 .navbar-nav .nav-link.btn-nav {
-  background-image: url('../img/maderaclara.jpg');
+  background-image: url('../img/maderauro.png');
   color: #343a40;
   border: 1px solid transparent;
   margin: 0 5px;
