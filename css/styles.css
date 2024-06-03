@@ -1,6 +1,3 @@
-*{
-  background-image: url('../img/maderauro.png');
-}
 /* Estilos para el contenido de cada bloque */
 .content-block {
   text-align: center; /* Centrar el contenido */
@@ -10,17 +7,23 @@
 
 /* Estilos para las tarjetas */
 .card {
-  background-image: url('../img/maderauro.png');
   border:none;
   align-items: center;
   padding-left: 10%;
   padding-right: 10%;
+  background: none;
 }
 
 /* Estilos para el texto dentro de las tarjetas */
 .card-body {
   font-weight: bold;
   padding: 20px; /* Espacio interno */
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card h2 {
+  color: black; /* Color del texto */
+  font-weight: bolder;
 }
 
 @keyframes scroll {
@@ -48,12 +51,6 @@
   white-space: nowrap;
   animation: scroll 9s linear infinite;
 }
-/* Estilos para los títulos de las tarjetas */
-.card h2 {
-  color: black; /* Color del texto */
-  font-weight: bolder;
-}
-/*estilos frase en movimiento*/
 
 /* Estilos específicos de tu hoja de estilos */
 body {
@@ -64,6 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url('../img/maderauro.png');
 }
 
 h2::first-letter {
@@ -73,7 +71,6 @@ h2::first-letter {
 
 header,
 footer {
-  background-image: url('../img/maderauro.png');
   color: black;
   padding: 1em 0;
 }
@@ -125,10 +122,7 @@ h2 {
     transform: translateX(-100%);
   }
 }
-main{
-  background-image: url('../img/maderauro.png');
 
-}
 .scrolling-text {
   color: #90091d;
   margin-top: 20px;
